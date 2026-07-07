@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RA Kart Curitiba | Kart Indoor de Alta Performance</title>
+<meta name="description" content="RA Kart Curitiba — kart indoor de alta performance. Batidas eletrônicas, pista climatizada e experiência premium para amigos, famílias e eventos corporativos.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="RA Kart Curitiba | Kart Indoor de Alta Performance">
+<meta property="og:description" content="Viva a emoção das pistas. Kart indoor premium em Curitiba.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+
+<!-- Favicon placeholder -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%230A0A0A%22/><text x=%2250%22 y=%2268%22 font-size=%2260%22 fill=%22%23E10600%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22900%22>R</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ LOADER ============ -->
+<div class="loader" id="loader">
+  <div class="loader-inner">
+    <span class="loader-word">RA</span>
+    <span class="loader-word loader-word--accent">KART</span>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+</div>
+
+<!-- ============ LAP PROGRESS (signature scroll indicator) ============ -->
+<div class="lap-track" aria-hidden="true">
+  <div class="lap-track-fill" id="lapFill"></div>
+  <div class="lap-track-kart" id="lapKart">🏁</div>
+</div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <a href="#home" class="logo">
+      <span class="logo-mark">RA</span><span class="logo-text">KART<span class="logo-dot">.</span></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-menu" id="navMenu">
+      <a href="#home" class="nav-link"><span>01</span>Início</a>
+      <a href="#sobre" class="nav-link"><span>02</span>Sobre</a>
+      <a href="#estrutura" class="nav-link"><span>03</span>Estrutura</a>
+      <a href="#eventos" class="nav-link"><span>04</span>Eventos</a>
+      <a href="#galeria" class="nav-link"><span>05</span>Galeria</a>
+      <a href="#faq" class="nav-link"><span>06</span>FAQ</a>
+      <a href="#contato" class="nav-link nav-link--cta">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=1920&auto=format&fit=crop" alt="Kart em alta velocidade na pista" class="hero-img">
+    <div class="hero-overlay"></div>
+    <div class="hero-stripes" aria-hidden="true"></div>
+  </div>
+
+  <div class="hero-content">
+    <p class="eyebrow reveal-up"><span class="eyebrow-line"></span>Kart Indoor · Curitiba</p>
+    <h1 class="hero-title">
+      <span class="reveal-up" style="--d:0.05s">VIVA A EMOÇÃO</span>
+      <span class="reveal-up hero-title--accent" style="--d:0.15s">DAS PISTAS.</span>
+    </h1>
+    <p class="hero-subtitle reveal-up" style="--d:0.28s">Experiência de kart indoor para amigos, famílias e eventos corporativos — velocidade real, adrenalina de verdade.</p>
+    <div class="hero-actions reveal-up" style="--d:0.4s">
+      <a href="https://wa.me/5541900000000?text=Quero%20agendar%20uma%20bateria%20de%20kart!" target="_blank" rel="noopener" class="btn btn--primary">
+        Agendar pelo WhatsApp
+      </a>
+      <a href="#estrutura" class="btn btn--ghost">Conhecer a pista</a>
+    </div>
+  </div>
+
+  <a href="#sobre" class="hero-scroll" aria-label="Rolar para baixo">
+    <span class="hero-scroll-line"></span>
+    <span>ROLAR</span>
+  </a>
+
+  <div class="hero-flag" aria-hidden="true"></div>
+</section>
+
+<!-- ============ STATS STRIP ============ -->
+<!-- PLACEHOLDER: números ilustrativos — substituir pelos dados reais do proprietário -->
+<section class="stats-strip">
+  <div class="stats-strip-inner">
+    <div class="stat">
+      <span class="stat-num" data-count="1200">0</span><span class="stat-suffix">m</span>
+      <span class="stat-label">Pista indoor</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" data-count="20">0</span><span class="stat-suffix">+</span>
+      <span class="stat-label">Karts na frota</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" data-count="60">0</span><span class="stat-suffix">km/h</span>
+      <span class="stat-label">Velocidade máx.</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" data-count="15">0</span><span class="stat-suffix">mil+</span>
+      <span class="stat-label">Pilotos na pista</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOBRE ============ -->
+<section class="sobre" id="sobre">
+  <div class="section-inner sobre-grid">
+    <div class="sobre-media">
+      <img src="https://images.unsplash.com/photo-1596466107070-4f65a4a86e5d?q=80&w=1200&auto=format&fit=crop" alt="Pista de kart indoor RA Kart Curitiba" class="sobre-img sobre-img--1">
+      <img src="https://images.unsplash.com/photo-1541348263662-e068662d82af?q=80&w=900&auto=format&fit=crop" alt="Piloto se preparando para a corrida" class="sobre-img sobre-img--2">
+      <div class="sobre-badge">
+        <strong>100%</strong>
+        <span>Elétrico &amp; sustentável</span>
+      </div>
+    </div>
+    <div class="sobre-text">
+      <p class="eyebrow"><span class="eyebrow-line"></span>Sobre a RA Kart</p>
+      <h2 class="section-title">Onde a pista <span class="text-accent">vira palco</span> para sua velocidade.</h2>
+      <p class="section-lead">A RA Kart Curitiba nasceu para transformar adrenalina em experiência. Nossa pista indoor foi desenhada com curvas técnicas, retas de arrancada e cronometragem eletrônica de precisão — tudo em um ambiente climatizado, seguro e pensado para todos os níveis de piloto.</p>
+      <p>Seja para disputar com os amigos, comemorar uma data especial ou fortalecer o time da empresa, colocamos você no assento de um kart de verdade, com equipamentos de ponta e uma equipe que respira competição.</p>
+      <ul class="sobre-list">
+        <li>Karts de alta performance revisados a cada bateria</li>
+        <li>Equipe técnica especializada em pista e segurança</li>
+        <li>Cronometragem eletrônica com ranking em tempo real</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIFERENCIAIS / ESTRUTURA ============ -->
+<section class="diferenciais" id="estrutura">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="eyebrow eyebrow--center"><span class="eyebrow-line"></span>Estrutura</p>
+      <h2 class="section-title section-title--center">Feito para <span class="text-accent">performance</span> de verdade.</h2>
+    </div>
+
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon">🏎️</div>
+        <h3>Equipamentos modernos</h3>
+        <p>Karts revisados constantemente, com chassi de competição e resposta imediata no acelerador.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🛡️</div>
+        <h3>Segurança em primeiro lugar</h3>
+        <p>Pista com barreiras de contenção, briefing obrigatório e equipe atenta a cada bateria.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⛑️</div>
+        <h3>Capacetes higienizados</h3>
+        <p>Protocolo de higienização entre cada uso, com balaclavas descartáveis disponíveis.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⏱️</div>
+        <h3>Cronometragem eletrônica</h3>
+        <p>Transponders em todos os karts para tempos de volta precisos e ranking ao vivo.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">❄️</div>
+        <h3>Ambiente climatizado</h3>
+        <p>Pista indoor com climatização, para correr no seu melhor ritmo em qualquer estação.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🧑‍🔧</div>
+        <h3>Equipe especializada</h3>
+        <p>Instrutores e mecânicos dedicados a manter a pista rápida e a experiência inesquecível.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMO FUNCIONA ============ -->
+<section class="como-funciona">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="eyebrow eyebrow--center"><span class="eyebrow-line"></span>Passo a passo</p>
+      <h2 class="section-title section-title--center">Como funciona a <span class="text-accent">sua bateria</span></h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-line" aria-hidden="true"></div>
+
+      <div class="timeline-step">
+        <span class="timeline-num">01</span>
+        <h3>Escolha sua bateria</h3>
+        <p>Selecione o formato ideal: bateria avulsa, pacote de amigos ou evento fechado.</p>
+      </div>
+      <div class="timeline-step">
+        <span class="timeline-num">02</span>
+        <h3>Faça a reserva</h3>
+        <p>Garanta seu horário pelo WhatsApp ou site — vagas limitadas por sessão.</p>
+      </div>
+      <div class="timeline-step">
+        <span class="timeline-num">03</span>
+        <h3>Receba as instruções</h3>
+        <p>Um briefing rápido sobre a pista, bandeiras e regras de segurança.</p>
+      </div>
+      <div class="timeline-step">
+        <span class="timeline-num">04</span>
+        <h3>Vista os equipamentos</h3>
+        <p>Capacete, balaclava e colete são fornecidos — é só se equipar e ir para o grid.</p>
+      </div>
+      <div class="timeline-step">
+        <span class="timeline-num">05</span>
+        <h3>Corra</h3>
+        <p>Luzes apagam, bandeira baixa: sua bateria começa. Bora buscar a pole?</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EVENTOS ============ -->
+<section class="eventos" id="eventos">
+  <div class="eventos-bg"></div>
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="eyebrow eyebrow--center"><span class="eyebrow-line"></span>Eventos</p>
+      <h2 class="section-title section-title--center">Sua próxima <span class="text-accent">largada</span> começa aqui.</h2>
+      <p class="section-lead section-lead--center">Transformamos qualquer ocasião em uma disputa memorável — no grid, todos partem iguais.</p>
+    </div>
+
+    <div class="eventos-grid">
+      <div class="evento-card">
+        <span class="evento-icon">🎂</span>
+        <h3>Aniversários</h3>
+        <p>Comemore com direito a pódio, troféu e muita adrenalina entre amigos.</p>
+      </div>
+      <div class="evento-card">
+        <span class="evento-icon">🏢</span>
+        <h3>Empresas</h3>
+        <p>Confraternizações e ações de incentivo com um toque de competição saudável.</p>
+      </div>
+      <div class="evento-card">
+        <span class="evento-icon">🤝</span>
+        <h3>Team Building</h3>
+        <p>Dinâmicas em equipe que unem estratégia, comunicação e velocidade.</p>
+      </div>
+      <div class="evento-card">
+        <span class="evento-icon">🥂</span>
+        <h3>Despedidas de solteiro(a)</h3>
+        <p>Uma última corrida de solteiro antes do grande dia — com direito a campeonato.</p>
+      </div>
+      <div class="evento-card">
+        <span class="evento-icon">🔒</span>
+        <h3>Eventos privados</h3>
+        <p>Pista fechada só para o seu grupo, com formato de campeonato sob medida.</p>
+      </div>
+    </div>
+
+    <div class="eventos-cta">
+      <a href="https://wa.me/5541900000000?text=Quero%20solicitar%20um%20or%C3%A7amento%20para%20evento" target="_blank" rel="noopener" class="btn btn--primary">Solicitar orçamento</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALERIA ============ -->
+<section class="galeria" id="galeria">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="eyebrow eyebrow--center"><span class="eyebrow-line"></span>Galeria</p>
+      <h2 class="section-title section-title--center">Direto do <span class="text-accent">grid</span></h2>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <button class="gallery-item gallery-item--wide" data-full="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=1600&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=700&auto=format&fit=crop" alt="Kart em movimento na pista">
+      </button>
+      <button class="gallery-item" data-full="https://images.unsplash.com/photo-1541348263662-e068662d82af?q=80&w=1400&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1541348263662-e068662d82af?q=80&w=700&auto=format&fit=crop" alt="Piloto pronto para a largada">
+      </button>
+      <button class="gallery-item" data-full="https://images.unsplash.com/photo-1596466107070-4f65a4a86e5d?q=80&w=1400&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1596466107070-4f65a4a86e5d?q=80&w=700&auto=format&fit=crop" alt="Vista geral da pista indoor">
+      </button>
+      <button class="gallery-item" data-full="https://images.unsplash.com/photo-1554744512-573b7052dbbb?q=80&w=1400&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1554744512-573b7052dbbb?q=80&w=700&auto=format&fit=crop" alt="Grupo de amigos no kart">
+      </button>
+      <button class="gallery-item gallery-item--wide" data-full="https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=1600&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=700&auto=format&fit=crop" alt="Curva técnica da pista">
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Fechar">&times;</button>
+  <img src="" alt="" id="lightboxImg">
+</div>
+
+<!-- ============ DEPOIMENTOS ============ -->
+<section class="depoimentos">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="eyebrow eyebrow--center"><span class="eyebrow-line"></span>Depoimentos</p>
+      <h2 class="section-title section-title--center">Quem correu, <span class="text-accent">recomenda</span></h2>
+    </div>
+
+    <div class="depoimentos-grid">
+      <div class="depoimento-card">
+        <div class="stars">★★★★★</div>
+        <p>"Fui com a galera do trabalho e foi disparado o melhor happy hour que já tivemos. Pista rápida e karts muito responsivos."</p>
+        <span class="depoimento-author">— Lucas M.</span>
+      </div>
+      <div class="depoimento-card">
+        <div class="stars">★★★★★</div>
+        <p>"Levei meu filho no aniversário dele e as crianças amaram. Equipe super atenciosa com a segurança de todo mundo."</p>
+        <span class="depoimento-author">— Fernanda R.</span>
+      </div>
+      <div class="depoimento-card">
+        <div class="stars">★★★★★</div>
+        <p>"Organizamos a despedida de solteiro lá e foi surreal. Cronometragem em telão deixou a disputa ainda mais emocionante."</p>
+        <span class="depoimento-author">— Rafael T.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="section-inner faq-inner">
+    <div class="section-head section-head--left">
+      <p class="eyebrow"><span class="eyebrow-line"></span>FAQ</p>
+      <h2 class="section-title">Perguntas <span class="text-accent">frequentes</span></h2>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-item">
+        <button class="accordion-trigger">
+          Quem pode correr?
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-panel"><p>Qualquer pessoa que atenda à altura mínima exigida pela pista pode participar — consulte a equipe no local para confirmar os critérios atuais.</p></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger">
+          Existe idade mínima?
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-panel"><p>Sim. A idade mínima segue as normas de segurança da pista — informações detalhadas estão disponíveis na recepção e no atendimento via WhatsApp.</p></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger">
+          É necessário reservar?
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-panel"><p>Recomendamos reservar com antecedência, principalmente em finais de semana e feriados, já que as vagas por bateria são limitadas.</p></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger">
+          Quanto tempo dura a bateria?
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-panel"><p>Cada bateria tem duração definida em minutos ou número de voltas, além do tempo de briefing e equipamentos — detalhes exatos com a equipe no agendamento.</p></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger">
+          Preciso levar algum equipamento?
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-panel"><p>Não. Fornecemos capacete, balaclava descartável e colete de proteção. Recomendamos apenas roupas confortáveis e tênis fechado.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOCALIZAÇÃO / CONTATO ============ -->
+<section class="localizacao" id="contato">
+  <div class="section-inner localizacao-grid">
+    <div class="localizacao-info">
+      <p class="eyebrow"><span class="eyebrow-line"></span>Localização</p>
+      <h2 class="section-title">Venha <span class="text-accent">acelerar</span> com a gente</h2>
+      <ul class="info-list">
+        <li>
+          <strong>Endereço</strong>
+          <span>R. Exemplo, 1234 — Bairro Modelo, Curitiba/PR <em>(placeholder)</em></span>
+        </li>
+        <li>
+          <strong>Telefone</strong>
+          <span>(41) 0000-0000 <em>(placeholder)</em></span>
+        </li>
+        <li>
+          <strong>WhatsApp</strong>
+          <span>(41) 90000-0000 <em>(placeholder)</em></span>
+        </li>
+        <li>
+          <strong>Horário</strong>
+          <span>Ter–Dom · horários a definir pelo proprietário <em>(placeholder)</em></span>
+        </li>
+      </ul>
+      <a href="https://wa.me/5541900000000" target="_blank" rel="noopener" class="btn btn--primary">Falar no WhatsApp</a>
+    </div>
+    <div class="localizacao-map">
+      <iframe
+        src="https://www.google.com/maps?q=Curitiba,PR&output=embed"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" title="Mapa de localização (placeholder)">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="section-inner footer-inner">
+    <a href="#home" class="logo footer-logo">
+      <span class="logo-mark">RA</span><span class="logo-text">KART<span class="logo-dot">.</span></span>
+    </a>
+
+    <nav class="footer-links">
+      <a href="#sobre">Sobre</a>
+      <a href="#estrutura">Estrutura</a>
+      <a href="#eventos">Eventos</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="footer-social">
+      <a href="#" aria-label="Instagram">IG</a>
+      <a href="#" aria-label="Facebook">FB</a>
+      <a href="#" aria-label="TikTok">TT</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> RA Kart Curitiba. Todos os direitos reservados.</p>
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">↑</button>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
