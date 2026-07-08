@@ -63,11 +63,14 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   /* ---------- Generic reveal-on-scroll for sections ---------- */
-  const revealTargets = document.querySelectorAll('.card, .evento-card, .depoimento-card, .timeline-step, .gallery-item, .sobre-media, .sobre-text');
-  revealTargets.forEach(el => {
+  const revealTargets = document.querySelectorAll(
+    '.card, .evento-card, .depoimento-card, .timeline-step, .gallery-item, .sobre-media, .sobre-text, ' +
+    '.section-head, .accordion-item, .info-list li, .reserve-copy, .reserve-stats, .localizacao-map'
+  );
+  revealTargets.forEach((el, i) => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(24px)';
-    el.style.transition = 'opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1)';
+    el.style.transition = `opacity 0.7s cubic-bezier(0.16,1,0.3,1) ${(i % 6) * 0.06}s, transform 0.7s cubic-bezier(0.16,1,0.3,1) ${(i % 6) * 0.06}s`;
   });
 
   const io = new IntersectionObserver((entries) => {
@@ -120,6 +123,27 @@ document.addEventListener('DOMContentLoaded', () => {
   lightboxClose.addEventListener('click', closeLightbox);
   lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+
+  /* ---------- Light parallax on hero image ---------- */
+  const heroImg = document.querySelector('.hero-img');
+  const hero = document.querySelector('.hero');
+  if (heroImg && hero) {
+    let ticking = false;
+    const applyParallax = () => {
+      const rect = hero.getBoundingClientRect();
+      if (rect.bottom > 0 && rect.top < window.innerHeight) {
+        const offset = window.scrollY * 0.18;
+        heroImg.style.transform = `scale(1.08) translateY(${offset}px)`;
+      }
+      ticking = false;
+    };
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(applyParallax);
+        ticking = true;
+      }
+    }, { passive: true });
+  }
 
   /* ---------- Back to top ---------- */
   document.getElementById('backToTop').addEventListener('click', () => {
